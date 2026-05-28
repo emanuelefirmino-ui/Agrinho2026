@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemetria Agrícola Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">AgroTelemetry<span>Green</span></div>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Conectividade no Campo, Respeito ao Planeta</h1>
+            <p>Tratores e colheitadeiras conectados transmitem dados de combustível em tempo real para reduzir custos e emissões de CO₂.</p>
+            <a href="#simulador" class="btn">Ver Simulador Ao Vivo</a>
+        </div>
+    </section>
+
+    <section id="beneficios" class="features">
+        <div class="container">
+            <h2>Como a Telemetria Reduz a Pegada de Carbono?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Monitoramento de Consumo</h3>
+                    <p>Sensores IoT medem o gasto exato de diesel por hectare trabalhado.</p>
+                </div>
+                <div class="card">
+                    <h3>Alertas de Ociosidade</h3>
+                    <p>Identifique motores ligados sem necessidade e evite a queima inútil de combustível.</p>
+                </div>
+                <div class="card">
+                    <h3>Rotas Otimizadas</h3>
+                    <p>Algoritmos planejam o trajeto mais curto e eficiente para tratores e colheitadeiras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulador" class="dashboard-section">
+        <div class="container">
+            <h2>Painel de Telemetria (Simulação em Tempo Real)</h2>
+            <p class="subtitle">Dados fictícios atualizados a cada 3 segundos via sensores conectados.</p>
+            
+            <div class="dashboard-grid">
+                <div class="dash-card">
+                    <h4>Consumo Atual</h4>
+                    <div class="value" id="consumo-val">24.5 L/h</div>
+                </div>
+                <div class="dash-card">
+                    <h4>Redução de CO₂ Acumulada</h4>
+                    <div class="value" id="co2-val">142 kg</div>
+                </div>
+                <div class="dash-card">
+                    <h4>Eficiência da Frota</h4>
+                    <div class="value" id="eficiencia-val">92%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AgroTelemetryGreen. Tecnologia para um futuro sustentável.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
