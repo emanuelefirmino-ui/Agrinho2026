@@ -1,0 +1,33 @@
+// Função para gerar números aleatórios dentro de um intervalo
+function gerarDadoAleatorio(min, max, decimais = 1) {
+    const valor = Math.random() * (max - min) + min;
+    return valor.toFixed(decimais);
+}
+
+// Elementos do DOM
+const consumoElemento = document.getElementById('consumo-val');
+const co2Elemento = document.getElementById('co2-val');
+const eficienciaElemento = document.getElementById('eficiencia-val');
+
+// Valores iniciais do acumulador
+let totalCO2Reduzido = 142.0;
+
+// Simulação de telemetria em tempo real
+function atualizarTelemetria() {
+    // Consumo varia entre 20 e 28 litros por hora em tratores/colheitadeiras
+    const novoConsumo = gerarDadoAleatorio(20, 28, 1);
+    consumoElemento.innerText = `${novoConsumo} L/h`;
+
+    // Eficiência varia de acordo com a otimização de rotas
+    const novaEficiencia = Math.floor(gerarDadoAleatorio(88, 97, 0));
+    eficienciaElemento.innerText = `${novaEficiencia}%`;
+
+    // Acumula a redução de CO2 com base na eficiência atual
+    const ganhoCO2 = parseFloat(gerarDadoAleatorio(0.1, 0.4, 2));
+    totalCO2Reduzido += ganhoCO2;
+    co2Elemento.innerText = `${totalCO2Reduzido.toFixed(1)} kg`;
+}
+
+// Atualiza o painel a cada 3 segundos
+setInterval(atualizarTelemetria, 3000);
+
